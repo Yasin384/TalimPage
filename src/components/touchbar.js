@@ -5,7 +5,8 @@ import '../cssComponents/TouchBar.css'; // Import the CSS file for styling
 const contributions = {
     'main': ['/profile','/lesson'],
     'lessons': ['/lessons','/lessonInfo'],
-    'rating': ['/rating','/leaderBoard']
+    'rating': ['/rating','/leaderBoard'],
+    'aichat': ['/chat']
 }
 
 function TouchBar({ user }) {
@@ -33,6 +34,9 @@ function TouchBar({ user }) {
             )}
             <div className="TouchBar-icon" id={contributions['rating'].includes(location.pathname) ? 'current4' : 'assad'} onClick={() => navigateAndClose('/rating')}>
                 <i className="fas fa-star"></i>
+            </div>
+            <div className="TouchBar-icon" id={contributions['aichat'].includes(location.pathname) ? 'current4' : 'assad'} onClick={() => navigateAndClose('/chat')}>
+            <i class="fa-solid fa-comment"/>
             </div>
         </div>
     );

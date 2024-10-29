@@ -25,6 +25,7 @@ import { LeaderboardUs } from './apps/leaderboardus.js';
 import TouchBar from './components/touchbar.js';
 import CheckAttendance from './components/attendanceBtn.js';
 import LoadingPage from './components/loading.js';
+import AichatPage from './aichat/mainpage.js';
 
 function App() {
   const [user, setUser] = useState(null);
@@ -117,7 +118,7 @@ function Main({ user, setUser }) {
       {user ? (
         <header className="App-header">
           <>
-            {user.role !== 'Teacher' && user.name && <CheckAttendance user={user}/>}
+            {user.role !== 'Teacher' && user.name && location.pathname === '/' && <CheckAttendance user={user}/>}
           </>
           
          {user.name ? (
@@ -136,6 +137,8 @@ function Main({ user, setUser }) {
                 <Route path="/scores" element={<PageScores />} />
                 <Route path="/adminpane" element={<AdminPanel />} />
                 <Route path="/leaderBoard" element={<LeaderboardUs user={user} />} />
+
+                <Route path="/chat" element={<AichatPage user={user} />} />
 
                 <Route path="*" element={<Navigate to="/" />} />
               </Routes>

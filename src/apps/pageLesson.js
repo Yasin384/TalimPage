@@ -7,7 +7,6 @@ import { getThemeLesson } from '../components/scores';
 
 const db = getDatabase();
 
-
 const findLessonByName = async (lessonName) => {
     const dbRef = ref(db);
     try {
@@ -46,32 +45,27 @@ export const PageLesson = ({ user }) => {
     const [formData, setFormData] = useState({ theme: '', homework: '' });
     const { t } = useTranslation();
     const location = useLocation();
-const { lesson, date } = location.state || {};
+    const { lesson, date } = location.state || {};
 
-useEffect(() => {
-    
-    const fetchThemeLesson = async () => {
-        if (!date || !lesson || !lesson.name) {
+    useEffect(() => {
+        const fetchThemeLesson = async () => {
+            if (!date || !lesson || !lesson.name) return;
 
-            return;
-        }
+            try {
+                console.log("Fetching theme lesson for:", { date, lesson });
+                const lessonData = await getThemeLesson(
+                    date, 
+                    lesson.group ? lesson.group[0] : user.group.split(' ')[0], 
+                    lesson.name
+                );
+                setLessonData(lessonData);
+            } catch (error) {
+                console.error("Error fetching theme lesson:", error);
+            }
+        };
 
-        try {
-            console.log("Fetching theme lesson for:", { date, lesson });
-            const lessonData = await getThemeLesson(
-                date, 
-                lesson.group ? lesson.group[0] : user.group.split(' ')[0], 
-                lesson.name
-            );
-
-            setLessonData(lessonData);
-        } catch (error) {
-            console.error("Error fetching theme lesson:", error);
-        }
-    };
-
-    fetchThemeLesson();
-}, [date, lesson]);
+        fetchThemeLesson();
+    }, [date, lesson]);
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -93,6 +87,7 @@ useEffect(() => {
             saveLessonData(lesson.name, x, dataToSave);
         });
         setIsEditing(false);
+        setFormData({ theme: '', homework: '' }); // Reset form data after save
     };
 
     if (!lesson) {
@@ -128,8 +123,8 @@ useEffect(() => {
     
             {user?.role === 'Teacher' && (
                 <div className="teacher-actions">
-                    <button className="edit-lesson" onClick={editLesson}>{t('edit_lesson')}</button>
-                    <button className="edit-scores" onClick={() => selectGroup(lesson)}>{t('edit_scores')}</button>
+                    <button className="edit-lesson" onClick={editLesson} aria-label="Edit lesson">{t('edit_lesson')}</button>
+                    <button className="edit-scores" onClick={() => selectGroup(lesson)} aria-label="Edit scores">{t('edit_scores')}</button>
                 </div>
             )}
     
@@ -154,11 +149,10 @@ useEffect(() => {
                 </form>
             )}
     
-            <div className="buttonback" onClick={handleBackClick}>
+            <div className="buttonback" onClick={handleBackClick} aria-label="Back button">
                 <i className="fas fa-arrow-left"></i>
                 <p>{t('back_btn')}</p>
             </div>
         </div>
     );
-    
 };
