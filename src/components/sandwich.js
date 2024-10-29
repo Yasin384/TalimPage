@@ -61,7 +61,10 @@ export const Sandwich = ({ user }) => {
         </button>
           <h1 id='inter-font' onClick={() => navigateAndClose('/')}>TalimPage</h1>
           
-        <LanguageSelector />
+          <div className="TouchBar-icon" onClick={() => navigateAndClose('/chat')}>
+                <i className="fas fa-comment"></i>
+            </div>
+        
       </div>
   
       {isOpen && <div className="overlay" onClick={closeMenu}></div>}
@@ -115,6 +118,7 @@ export const Sandwich = ({ user }) => {
                       <i className="fas fa-star"></i>
                       <p>{t('scheduleD')}</p>
                     </div>
+                    <LanguageSelector />
                     </>
                   )}
                 </div>

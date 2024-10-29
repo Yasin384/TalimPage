@@ -114,7 +114,7 @@ function Main({ user, setUser }) {
 
   return (
     <div className="App">
-      <Sandwich user={user} />
+      {location.pathname !== '/chat' && <Sandwich user={user} />}
       {user ? (
         <header className="App-header">
           <>
@@ -144,7 +144,7 @@ function Main({ user, setUser }) {
               </Routes>
 
               {showLogoAndContacts.includes(location.pathname) && <LogoAndContacts />}
-              <TouchBar user={user}/>
+              {location.pathname !== '/chat' && <TouchBar user={user}/>}
             </>
           ) : (
             <LoadingPage/>

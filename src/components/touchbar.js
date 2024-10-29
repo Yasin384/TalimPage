@@ -35,9 +35,7 @@ function TouchBar({ user }) {
             <div className="TouchBar-icon" id={contributions['rating'].includes(location.pathname) ? 'current4' : 'assad'} onClick={() => navigateAndClose('/rating')}>
                 <i className="fas fa-star"></i>
             </div>
-            <div className="TouchBar-icon" id={contributions['aichat'].includes(location.pathname) ? 'current4' : 'assad'} onClick={() => navigateAndClose('/chat')}>
-            <i class="fa-solid fa-comment"/>
-            </div>
+            
         </div>
     );
 }

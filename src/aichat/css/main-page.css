@@ -7,31 +7,38 @@
     max-width: 500px;
     margin: auto;
     border-radius: 20px;
-    background-color: #f0f4f8;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    background-color: #f0f4f8; /* Light background for the chat */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     font-family: 'SF Pro Text', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /* Header */
 .chat-header {
-    background-color: #007aff;
+    background-color: #4a90e2; /* Primary blue color */
     color: white;
     text-align: center;
+    justify-content: center;
     padding: 20px;
     font-size: 1.5em;
     font-weight: bold;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
+    height: 4rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.chat-header p {
+    color: white;
 }
 
 /* Messages area */
 .chat-messages {
     flex-grow: 1;
     padding: 20px;
-    background-color: #ffffff;
+    
+    background-color: #ffffff; /* White background for messages */
     overflow-y: auto;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.05);
 }
 
 /* Individual messages */
@@ -43,30 +50,33 @@
     word-wrap: break-word;
     position: relative;
     font-size: 1em;
+    transition: background 0.3s;
 }
 
 /* User message styling */
 .message.user {
-    background-color: #007aff;
+    background-color: #4a90e2; /* User message background */
     color: white;
     align-self: flex-end;
     border-bottom-right-radius: 4px;
     margin-left: 100px;
+    box-shadow: 0 2px 5px rgba(0, 122, 255, 0.2);
 }
 
 /* AI message styling */
 .message.ai {
-    background-color: #e0e0e0;
+    background-color: #e0e0e0; /* Light gray for AI messages */
     color: #333;
     align-self: flex-start;
     border-bottom-left-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 /* Input area */
 .chat-input {
     display: flex;
     padding: 15px;
-    background-color: #f0f4f8;
+    background-color: #f0f4f8; /* Input area background */
     border-top: 1px solid #d1d1d6;
 }
 
@@ -83,22 +93,41 @@
 }
 
 .chat-input input:focus {
-    border-color: #007aff;
+    border-color: #007aff; /* Focused input border color */
 }
 
 .chat-input button {
-    padding: 10px 20px;
-    background-color: #007aff;
-    color: white;
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
-    transition: background 0.3s, transform 0.2s;
-    font-size: 1em;
-    width: 1rem;
+    display: flex; /* Enable flexbox */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    padding: 10px 20px; /* Button padding */
+    background-color: #007aff; /* Button background color */
+    color: white; /* Button text color */
+    border: none; /* No border */
+    border-radius: 20px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+    transition: background 0.3s, transform 0.2s; /* Transition effects */
+    font-size: 1rem; /* Font size */
+    width: auto; /* Width based on content */
+    height: 40px; /* Set height for better alignment */
+}
+
+.chat-input button i {
+    font-size: 1.2rem; /* Adjust icon size */
 }
 
 .chat-input button:hover {
-    background-color: #005ecb;
-    transform: scale(1.05);
+    background-color: #005ecb; /* Darker blue on hover */
+    transform: scale(1.05); /* Scale effect on hover */
+}
+
+
+/* Adjusting message alignment for user */
+.message.user {
+    margin-left: auto; /* Align user messages to the right */
+}
+
+/* Adjusting message alignment for AI */
+.message.ai {
+    margin-right: auto; /* Align AI messages to the left */
 }

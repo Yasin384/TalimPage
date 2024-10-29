@@ -10,7 +10,7 @@ function AichatPage({ user }) {
             setMessages([...messages, { text: input, sender: 'user' }]);
             setInput('');
             setTimeout(() => {
-                setMessages(prevMessages => [...prevMessages, { text: 'соси', sender: 'ai' }]);
+                setMessages(prevMessages => [...prevMessages, { text: 'сорян', sender: 'ai' }]);
             }, 1000);
         }
     };
@@ -18,7 +18,7 @@ function AichatPage({ user }) {
     return (
         <div className="chat-container">
             <div className="chat-header">
-                <h2>AI Chat</h2>
+                <h2 id='inter-font'>TalimGPT</h2>
             </div>
             <div className="chat-messages">
                 {messages.map((msg, index) => (
@@ -34,7 +34,9 @@ function AichatPage({ user }) {
                     onChange={(e) => setInput(e.target.value)} 
                     placeholder="Type your message..."
                 />
-                <button onClick={handleSend}>S</button>
+                <button onClick={handleSend}>
+                <i class="fa-solid fa-play"/>
+                </button>
             </div>
         </div>
     );
