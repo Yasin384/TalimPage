@@ -1,0 +1,169 @@
+/* Page container */
+.page-lesson-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px; /* Increased padding for more space */
+  max-width: 1400px; /* Increased width limit */
+  margin: 0 auto;
+  font-family: 'Arial', sans-serif;
+  margin-top: 100px;
+}
+
+/* Lesson card styling */
+.lesson-card2 {
+  background-color: #f8fafc;
+  border-radius: 20px; /* Slightly more rounded corners */
+  padding: 40px; /* Increased padding */
+  margin-bottom: 30px; /* More margin for spacing */
+  width: 100%;
+  max-width: 1000px; /* Increased max-width for larger card */
+  height: auto; /* Ensures card height adjusts */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Increased shadow for depth */
+  transition: transform 0.3s ease-in-out;
+}
+
+.lesson-card2:hover {
+  transform: translateY(-7px); /* Slightly more lift on hover */
+}
+
+.lesson-title2, .lesson-date2 {
+  text-align: center;
+  font-size: 2rem; /* Larger text size for prominence */
+  color: #2b6cb0;
+  margin: 15px 0;
+}
+
+.divider {
+  height: 2px; /* Thicker divider */
+  background-color: #cbd5e0;
+  margin: 20px 0; /* More spacing around dividers */
+}
+
+.lesson-details2 p {
+  font-size: 1.3rem; /* Larger font size for more clarity */
+  color: #4a5568;
+  margin: 10px 0;
+}
+
+.lesson-details2 i {
+  margin-right: 7px;
+  color: #63b3ed;
+}
+
+/* Edit actions for teachers */
+.teacher-actions {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px; /* Increased margin for space */
+}
+
+.edit-lesson, .edit-scores {
+  background-color: #3182ce;
+  border: none;
+  border-radius: 12px; /* Slightly larger buttons */
+  color: white;
+  padding: 15px 30px; /* Bigger padding for larger buttons */
+  cursor: pointer;
+  font-size: 1.2rem; /* Larger text on buttons */
+  transition: background-color 0.3s;
+}
+
+.edit-lesson:hover, .edit-scores:hover {
+  background-color: #2b6cb0;
+}
+
+/* Edit form */
+.edit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Larger gaps between form fields */
+  margin-top: 30px;
+  width: 100%;
+}
+
+.edit-input {
+  border: 1px solid #cbd5e0;
+  border-radius: 12px; /* More rounded form fields */
+  padding: 15px; /* Increased padding for larger input fields */
+  font-size: 1.2rem;
+  width: 100%;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+.edit-input:focus {
+  border-color: #3182ce;
+}
+
+.save-btn, .cancel-btn {
+  background-color: #3182ce;
+  border: none;
+  border-radius: 12px;
+  color: white;
+  padding: 15px 20px; /* Larger buttons */
+  cursor: pointer;
+  font-size: 1.2rem; /* Larger font on buttons */
+}
+
+.save-btn:hover, .cancel-btn:hover {
+  background-color: #2b6cb0;
+}
+
+/* Back button */
+.buttonback {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+  cursor: pointer;
+  color: #2b6cb0;
+  font-size: 1.3rem; /* Larger font for back button */
+}
+
+.buttonback i {
+  margin-right: 12px;
+  transition: transform 0.3s ease;
+}
+
+.buttonback:hover i {
+  transform: translateX(-7px); /* Slightly more motion for effect */
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .page-lesson-container {
+      padding: 20px; /* Adjusted padding for mobile */
+  }
+
+  .lesson-card2 {
+      width: 100%;
+      padding: 25px; /* Increased padding for mobile */
+  }
+
+  .lesson-title2, .lesson-date2 {
+      font-size: 1.8rem; /* Larger text on mobile */
+  }
+
+  .lesson-details2 p {
+      font-size: 1.2rem; /* Larger text for better readability */
+  }
+
+  .teacher-actions {
+      flex-direction: column;
+      gap: 12px;
+  }
+
+  .edit-lesson, .edit-scores {
+      width: 100%;
+      padding: 12px; /* Increased button size for easier tapping */
+  }
+
+  .edit-input {
+      font-size: 1.1rem; /* Increased input font size */
+  }
+
+  .buttonback {
+      justify-content: center;
+      font-size: 1.2rem; /* Larger font for mobile */
+  }
+}

@@ -1,0 +1,78 @@
+/* Fullscreen Background */
+.LoadingPage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #0d335e; /* Gradient from deep blue to light blue */
+    overflow: hidden;
+    position: relative;
+    color: #C4DFE6; /* Light blue text */
+}
+
+/* Loading Container */
+.loading {
+    text-align: center;
+}
+
+.loading p {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0;
+    animation: fade 1.5s infinite;
+}
+
+/* Separator line with a frosty look */
+.loading hr {
+    width: 60%;
+    margin: 15px auto;
+    border: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #66A5AD, #C4DFE6, #003B46);
+    box-shadow: 0 0 15px rgba(200, 240, 255, 0.7);
+    animation: pulse 2s infinite;
+}
+
+/* Spinning snowflake */
+.loadingCheck {
+    width: 50px;
+    height: 50px;
+    border: 6px solid transparent;
+    border-radius: 50%;
+    border-top: 6px solid #C4DFE6;
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
+}
+
+/* Snowflake animation */
+.snowflake {
+    position: absolute;
+    top: -50px;
+    color: #C4DFE6;
+    font-size: 1.2rem;
+    opacity: 0.8;
+    animation: fall linear infinite;
+}
+
+/* Keyframes for animations */
+@keyframes fall {
+    0% { transform: translateY(0) rotate(0deg); opacity: 0.9; }
+    100% { transform: translateY(100vh) rotate(360deg); opacity: 0.3; }
+}
+
+/* Keyframes for animations */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes fade {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+

@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">MetaPage</string>
+    <string name="title_activity_main">MetaPage</string>
+    <string name="package_name">com.metapage.app</string>
+    <string name="custom_url_scheme">com.metapage.app</string>
+</resources>

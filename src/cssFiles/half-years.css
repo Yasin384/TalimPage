@@ -1,0 +1,46 @@
+.half-years {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.half-btn {
+    border-radius: 12px;
+    background-color: #ffffff;
+    width: 10rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+    border: 1px solid #e0e0e0;
+}
+
+.half-btn:hover {
+    background-color: #f2f2f7;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.half-btn p {
+    color: #333333;
+    font-size: 15px;
+    font-weight: 500;
+    margin: 0;
+    letter-spacing: 0.5px;
+}
+
+.half-btn.current {
+    background-color: #007aff; /* Blue for current selection */
+    color: #ffffff; /* White text on current selection */
+    border: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.half-btn.current p {
+    color: #ffffff; /* Ensure text is white */
+}

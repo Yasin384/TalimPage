@@ -1,0 +1,222 @@
+/* Основные стили для контейнера */
+.meta-edu2 {
+  font-family: 'Inter', sans-serif;
+  background-color: #f5f8fc; /* Светло-голубой фон */
+  padding: 0;
+}
+
+.page-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #4a90e2; /* Яркий синий фон */
+  height: 3.4rem;
+  box-shadow: 0 4px 8px rgba(0, 115, 230, 0.3); /* Тень */
+  padding: 5px 10px;
+  display: flex;
+  align-items: center;
+  z-index: 104;
+  justify-content: space-between; /* Устанавливаем выравнивание по левому краю */
+  color: black !important;
+
+}
+
+.page-header h1 {
+  color: white !important;
+  margin-top: 1rem;
+}
+
+/* Кнопка меню */
+.toggle-menu {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  outline: none;
+  width: 50px;
+  margin-right: 0; /* Убираем отступы справа */
+}
+
+/* Боковая панель */
+.side-drawer {
+  position: fixed;
+  top: 60px; /* Отступ от заголовка */
+  left: 0;
+  width: 250px;
+  height: calc(100% - 60px);
+  background-color: #ffffff; /* Белый фон */
+  box-shadow: 4px 0 8px rgba(0, 0, 0, 0.1); /* Тень справа */
+  padding: 20px;
+  transform: translateX(-100%); /* Исходная позиция - за экраном */
+  transition: transform 0.5s ease-in-out; /* Плавный переход */
+  z-index: 103;
+}
+
+.side-drawer.open {
+  transform: translateX(0); /* Показываем панель */
+}
+
+/* Профиль */
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Центрирование по горизонтали */
+  justify-content: center; /* Центрирование по вертикали */
+  background-color: #f0f4f8;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 4px 15px rgba(0, 115, 230, 0.1);
+  margin-bottom: 20px;
+  width: 100%; /* Полная ширина контейнера */
+}
+
+.profile-content2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Центрирование содержимого */
+  text-align: center; /* Центрирование текста */
+}
+
+.profile-info2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Центрирование по горизонтали */
+}
+
+/* Стили для изображения профиля */
+.profile-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 3px solid #4a90e2; /* Синяя рамка */
+  background-color: #ffffff;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+/* Группа пользователя */
+.profile-group {
+  color: #0073e6;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+/* Имя пользователя */
+.profile-name {
+  color: #333333;
+  font-size: 17px !important;
+  font-weight: bold;
+  margin-bottom: 5px;
+  text-align: center; /* Центрирование текста */
+}
+
+/* Логин пользователя */
+.profile-login {
+  color: #555555;
+  font-size: 10px;
+  text-align: center; /* Центрирование текста */
+}
+
+/* Стили для кнопок */
+.btns {
+  margin-top: 20px;
+  width: 100%;
+}
+
+/* Стиль для контейнера с кнопками */
+.features {
+  display: grid; /* Используем сетку для колонок */
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* Колонки с минимальной шириной */
+  gap: 15px; /* Промежуток между кнопками */
+  width: 100%;
+}
+
+/* Стиль для каждой кнопки */
+.features div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #4a90e2; /* Яркий синий фон */
+  color: white;
+  padding: 12px 15px; /* Увеличенные внутренние отступы */
+  border-radius: 8px; /* Скругленные углы */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Плавный переход */
+  justify-content: center; /* Центрирование текста и иконки */
+}
+
+/* Иконки в кнопках */
+.features div i {
+  margin-right: 10px; /* Отступ между иконкой и текстом */
+}
+
+/* Эффект наведения на кнопки */
+.features div:hover {
+  background-color: #005bb5; /* Темнее при наведении */
+  transform: translateY(-2px); /* Легкий сдвиг вверх при наведении */
+}
+
+/* Стили для текста в кнопках */
+.features div p {
+  margin: 0; /* Убираем отступы по умолчанию */
+  font-size: 16px; /* Размер шрифта */
+  font-weight: 500; /* Нормальный вес шрифта */
+}
+
+/* Дополнительный стиль для кнопки администратора */
+.secretbtn {
+  background-color: #ffcc00; /* Желтый фон для кнопки администратора */
+}
+
+.secretbtn:hover {
+  background-color: #e6b800; /* Темнее при наведении для кнопки администратора */
+}
+
+/* Адаптация для мобильных устройств */
+@media (max-width: 768px) {
+  .side-drawer {
+    width: 250px; /* Меньшая ширина для мобильных */
+    top: 0;
+    height: 100%;
+    padding-top: 70px; /* Отступ сверху для заголовка */
+  }
+
+  .profile-container {
+    width: 90%; /* Ширина профиля на мобильных */
+    padding: 10px; /* Меньше внутреннего отступа */
+    padding-top: 50px;
+    box-shadow: none; /* Убираем тень */
+    justify-content: center;
+  }
+
+  .profile-image {
+    width: 60px;
+    height: 60px;
+    border-width: 2px; /* Тоньше рамка */
+    padding: 5px;
+    margin-bottom: 15px;
+  }
+
+  .profile-name {
+    font-size: 17px;
+  }
+
+  .profile-login {
+    font-size: 12px;
+  }
+
+  .features {
+    grid-template-columns: 1fr; /* Одна колонка на мобильных */
+    gap: 5px; /* Меньше промежуток между кнопками */
+  }
+
+  .features div {
+    max-width: 100%; /* Полная ширина для кнопки */
+  }
+
+  .btns {
+    margin-top: 15px; /* Меньше отступ сверху */
+  }
+}

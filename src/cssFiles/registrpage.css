@@ -1,0 +1,193 @@
+@media (max-width: 768px) {
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Форма входа */
+.login-form {
+  background-color: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+}
+
+/* Заголовок */
+h2 {
+  margin-bottom: 20px;
+  color: #004080; /* Темно-синий цвет */
+  font-size: 24px;
+}
+
+/* Инпут с иконками */
+.input-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #cce0ff; /* Светло-голубой цвет для границы */
+  border-radius: 8px;
+  background-color: #f0f8ff; /* Светло-синий фон */
+  transition: border-color 0.3s ease;
+  display: flex;
+}
+
+/* Иконка внутри инпута */
+.input-group i {
+  margin-right: 10px;
+  color: #0073e6; /* Основной синий */
+  font-size: 18px;
+}
+
+/* Текстовое поле */
+.input-group input {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 16px;
+  color: #333;
+}
+
+/* Интерактивное изменение цвета */
+.input-group:hover {
+  border-color: #0073e6; /* Цвет становится ярче при наведении */
+}
+
+/* Кнопка входа */
+.login-button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  background-color: #0073e6; /* Темно-синий фон кнопки */
+  color: white;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Эффекты при наведении на кнопку */
+.login-button:hover {
+  background-color: #005bb5; /* Более насыщенный синий */
+  box-shadow: 0 4px 12px rgba(0, 115, 230, 0.5); /* Тень при наведении */
+}
+
+/* Сообщения об ошибке и успехе */
+.error-message, .success-message {
+  margin-bottom: 15px;
+  font-size: 14px;
+  color: #ff4d4d; /* Ярко-красный для ошибок */
+  text-align: left;
+}
+
+/* Успешное сообщение */
+.success-message {
+  color: #28a745; /* Зеленый цвет для успеха */
+}
+}
+
+@media (min-width: 768px) {
+  
+
+  .login-container {
+    display: flex;
+    align-items: flex-start;
+    height: 100vh;
+
+  }
+
+  .login-form {
+    background-color: white;
+    padding: 30px;
+    width: 60%;
+    max-width: 400px;
+    height: 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding-top: 14%;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Заголовок */
+  h2 {
+    margin-bottom: 20px;
+    color: #004080; /* Темно-синий цвет */
+    font-size: 24px;
+  }
+  
+  /* Инпут с иконками */
+  .input-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 12px;
+    border: 1px solid #cce0ff; /* Светло-голубой цвет для границы */
+    border-radius: 8px;
+    background-color: #f0f8ff; /* Светло-синий фон */
+    transition: border-color 0.3s ease;
+    display: flex;
+  }
+  
+  /* Иконка внутри инпута */
+  .input-group i {
+    margin-right: 10px;
+    color: #0073e6; /* Основной синий */
+    font-size: 18px;
+  }
+  
+  /* Текстовое поле */
+  .input-group input {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  /* Интерактивное изменение цвета */
+  .input-group:hover {
+    border-color: #0073e6; /* Цвет становится ярче при наведении */
+  }
+  
+  /* Кнопка входа */
+  .login-button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background-color: #0073e6; /* Темно-синий фон кнопки */
+    color: white;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Эффекты при наведении на кнопку */
+  .login-button:hover {
+    background-color: #005bb5; /* Более насыщенный синий */
+    box-shadow: 0 4px 12px rgba(0, 115, 230, 0.5); /* Тень при наведении */
+  }
+  
+  /* Сообщения об ошибке и успехе */
+  .error-message, .success-message {
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: #ff4d4d; /* Ярко-красный для ошибок */
+    text-align: left;
+  }
+  
+  /* Успешное сообщение */
+  .success-message {
+    color: #28a745; /* Зеленый цвет для успеха */
+  }
+}

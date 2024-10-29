@@ -1,0 +1,91 @@
+/* Общий стиль страницы */
+.leaderboard-page {
+    background-color: #f0f8ff; /* Легкий голубой фон */
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: sans-serif;
+    margin-top: 100px;
+}
+
+/* Заголовок страницы */
+.leaderboard-title {
+    color: #004080; /* Темно-синий цвет */
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Список пользователей */
+.users-list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 500px; /* Максимальная ширина */
+    gap: 15px;
+    margin-top: 30px;
+}
+
+/* Элемент списка пользователей */
+.user-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #e6f2ff; /* Светло-синий фон для карточек */
+    padding: 15px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.user-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Стиль имени пользователя */
+.user-name {
+    font-size: 1.2rem;
+    color: #003366; /* Темно-синий цвет */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Стиль очков пользователя */
+.user-score {
+    font-size: 1.2rem;
+    color: #0073e6; /* Яркий синий цвет для очков */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Иконки Font Awesome */
+.user-name i, .user-score i {
+    font-size: 1.5rem;
+    color: #0073e6;
+}
+
+/* Сообщение при отсутствии пользователей */
+.no-users-message, .loading-message {
+    font-size: 1.2rem;
+    color: #808080;
+}
+
+/* Адаптивность */
+@media (max-width: 600px) {
+    .leaderboard-title {
+        font-size: 2rem;
+    }
+
+    .user-item {
+        padding: 10px 15px;
+    }
+
+    .user-name, .user-score {
+        font-size: 1rem;
+    }
+}

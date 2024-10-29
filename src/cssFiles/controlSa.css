@@ -1,0 +1,162 @@
+.schedule-control {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f4f7fc;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 10rem;
+}
+.lesson-card input {
+    width: 100%; /* Make the input fields take the full width of their parent container */
+    max-width: 200px; /* Set a max width to prevent overly wide inputs */
+    padding: 8px; /* Add padding for better appearance */
+    margin-bottom: 10px; /* Add space between each input */
+    border: 1px solid #ccc; /* Define a border for the inputs */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 14px; /* Adjust the font size */
+    box-sizing: border-box; /* Ensure padding does not affect width */
+}
+h2 {
+    text-align: center;
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 20px;
+}
+
+.group-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.group-btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+
+.group-btn:hover {
+    background-color: #0056b3;
+}
+
+.schedule-details {
+    margin-top: 30px;
+}
+
+.day-schedule {
+    margin-bottom: 40px;
+}
+
+h4 {
+    color: #007bff;
+    font-family: 'Roboto', sans-serif;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.lesson-cards {
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.lesson-card {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    font-family: 'Roboto', sans-serif;
+}
+
+.lesson-card:hover {
+    transform: translateY(-5px);
+}
+
+.lesson-card h5 {
+    color: #333;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.lesson-card p {
+    color: #555;
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+    .lesson-card input {
+        max-width: 100%; /* Ensure inputs are not too wide on smaller screens */
+        padding: 6px; /* Reduce padding for smaller screens */
+    }
+    .schedule-control {
+        padding: 15px;
+        max-width: 100%;
+        margin: 0 10px;
+    }
+
+    h2 {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+
+    .group-btn {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+
+    .lesson-cards {
+        grid-template-columns: 1fr; /* Single-column layout for smaller screens */
+    }
+
+    .lesson-card {
+        padding: 10px;
+    }
+
+    .lesson-card h5 {
+        font-size: 16px;
+    }
+
+    .lesson-card p {
+        font-size: 12px;
+    }
+}
+
+/* Ultra Small Screens */
+@media (max-width: 480px) {
+    .schedule-control {
+        padding: 10px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    .group-btn {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+
+    .lesson-card h5 {
+        font-size: 14px;
+    }
+
+    .lesson-card p {
+        font-size: 11px;
+    }
+}

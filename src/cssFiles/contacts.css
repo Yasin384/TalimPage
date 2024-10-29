@@ -1,0 +1,94 @@
+/* Контейнер всей страницы */
+.contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 60vh;
+    background-color: #dfdfdf; /* Светло-серый фон */
+    color: #333; /* Темно-серый текст */
+    font-family: 'Inter', sans-serif;
+    margin-top: 80px;
+    width: 100%;
+    border-radius: 8px;
+  }
+  
+  /* Логотип */
+  .main-logo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    background-color: #8e8e8e;
+    width: 70%;
+    justify-content: center;
+    border-radius: 8px;
+  }
+  
+  /* Иконка с выделением */
+  .iconGit {
+    width: 60px; /* Увеличенная ширина */
+    height: 60px; /* Увеличенная высота */
+    margin-right: 15px;
+    border-radius: 10%; /* Скругленные углы для иконки */
+    transition: transform 0.3s, box-shadow 0.3s; /* Плавный переход */
+  }
+  
+  .iconGit:hover {
+    transform: scale(1.1); /* Увеличение при наведении */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Увеличенная тень при наведении */
+  }
+  
+  .logo-n-text {
+    font-size: 24px;
+    color: #ffffff; /* Темный серый для текста логотипа */
+    font-weight: 600;
+  }
+  
+  /* Информация о контактах */
+  .meta-info {
+    font-size: 16px;
+    color: #666; /* Средний серый для текста */
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  
+  .meta-info p {
+    margin: 5px 0;
+  }
+  
+  /* Подпись внизу */
+  .legs {
+    margin-top: 230px;
+    font-size: 14px;
+    color: #999; /* Светло-серый для подписи */
+  }
+  
+  /* Адаптивность для мобильных */
+  @media (max-width: 768px) {
+    .contacts {
+      padding: 15px;
+    }
+  
+    .main-logo {
+      margin-bottom: 20px;
+    }
+  
+    .iconGit {
+      width: 50px; /* Уменьшенная ширина для мобильных */
+      height: 50px; /* Уменьшенная высота для мобильных */
+      margin-right: 10px;
+    }
+  
+    .logo-n-text {
+      font-size: 20px;
+    }
+  
+    .meta-info {
+      font-size: 14px;
+    }
+  
+    .legs {
+      font-size: 12px;
+    }
+  }
+  

@@ -1,0 +1,44 @@
+.TouchBar {
+    display: flex;
+    justify-content: space-around; /* Distribute icons evenly */
+    align-items: center;
+    background-color: #4a90e2; /* Light background for contrast */
+    padding: 10px 15px;
+    border-top: 1px solid #e0e0e0; /* Subtle top border */
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+    position: fixed; /* Fix at the bottom */
+    height: 3.3rem;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Ensure it stays on top */
+}
+
+.TouchBar-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px; /* Icon size */
+    color: #ffffff; /* Regular blue */
+    transition: transform 0.3s ease, color 0.3s ease, background-color 0.3s ease;
+}
+
+.TouchBar-icon:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+    color: #000000; /* Subtle background change */
+}
+
+.TouchBar-icon:active {
+    transform: scale(0.95); /* Shrink slightly when pressed */
+}
+
+.TouchBar-icon i {
+    pointer-events: none; /* Ensure click registers on the whole icon */
+}
+
+#current4 {
+    transform: scale(1.1); /* Slight zoom on hover */
+    color: #000000; /* Subtle background change */
+}

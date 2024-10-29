@@ -1,0 +1,72 @@
+.rating-page {
+    text-align: center;
+    padding: 60px 20px; /* Увеличено пространство вокруг */
+    background: linear-gradient(to bottom, #e3f2fd, #bbdefb); /* Градиент на фоне */
+    min-height: 100vh;
+    margin-top: 40px;
+}
+
+.rating-page h1 {
+    font-size: 36px;
+    color: #ffffff; 
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #1e88e5;
+    padding: 15px 10px;
+    border-radius: 15px;
+}
+
+.rankings-list {
+    display: flex;
+    max-width: 600px; /* Ограничение ширины для лучшего восприятия */
+    margin: 0 auto; /* Центрирование списка */
+    margin-top: 10rem;
+    justify-content: center;
+}
+
+.ranking-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+.ranking-item:hover {
+    background-color: #e9ecef; /* Светло-серый цвет при наведении */
+}
+
+.ranking-item span {
+    font-weight: bold; /* Жирный шрифт для текста */
+}
+
+.gold {
+    justify-content: center; /* Center content horizontally */
+    flex-direction: column;  /* Arrange the text vertically */
+    background-color: #FFD700; /* Example: Gold background */
+    color: #000;
+    font-weight: bold;
+    height: 17rem;
+}
+
+
+.silver {
+    justify-content: center; /* Center content horizontally */
+    flex-direction: column;  /* Arrange the text vertically */
+    background-color: rgb(168, 168, 168);; /* Example: Gold background */
+    color: #000;
+    font-weight: bold;
+    height: 14rem;
+    margin-top: 3rem;
+}
+
+.bronze {
+    justify-content: center; /* Center content horizontally */
+    flex-direction: column;  /* Arrange the text vertically */
+    background-color: rgb(246, 131, 0);; /* Example: Gold background */
+    color: #000;
+    font-weight: bold;
+    height: 11rem;
+    margin-top: 6rem;
+}

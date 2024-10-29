@@ -1,0 +1,113 @@
+@font-face {
+  font-family: 'inter';
+  src: url('/public/fonts/Inter_18pt-Bold.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'inter-light';
+  src: url('/public/fonts/Inter_18pt-Light.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'inter-regular';
+  src: url('/public/fonts/Inter_18pt-Regular.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+#inter-font {
+  font-family: inter;
+}
+
+#inter-regular-font {
+  font-family: inter-regular;
+}
+
+#inter-light-font {
+  font-family: inter-light;
+}
+
+#inter-font2 {
+  font-family: inter;
+}
+
+#inter-regular-font2 {
+  font-family: inter-regular;
+}
+
+#inter-light-font2 {
+  font-family: inter-light;
+}
+
+
+
+
+body {
+  padding-bottom: 3rem;
+}
+
+
+/* Основной контейнер для раздела */
+
+.down {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 10vh; 
+}
+
+
+/* Адаптация для мобильных устройств */
+
+
+
+
+
+
+
+
+/* Other elements styling */
+.box-user {
+  font-size: 1.4rem;
+}
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 1.5rem;
+  color: #0d47a1;
+}
+
+.buttonLanguages {
+  background-color: #4a90e2;
+  width: 50px;
+  height: 50px;
+  color: black !important;
+  align-self: center;
+  justify-content: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

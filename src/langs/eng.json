@@ -1,0 +1,120 @@
+{
+    "groups": "Groups",
+    "schedule": "Schedule",
+    "no_lessons": "No Lessons",
+    "unnamed_lesson": "Unnamed Lesson",
+    "no_lessons_today": "No lessons today",
+
+    "admin": "Console",
+    "lessons": "Gradebook",
+    "teacherp": "Teacher's Room",
+    "profile": "Profile",
+    "back_btn": "Back",
+    "logout_btn": "Logout",
+    "change_password_btn": "Change Password",
+
+    "room": "room",
+
+    "timeText": "Time",
+    "description_lesson": "Description",
+    "empty_lesson": "Empty",
+
+
+
+    "edit_scores": "Edit Scores",
+    "edit_lesson": "Edit Lesson Plan",
+
+    "login_as_teacher": "Login as Teacher",
+    "hello-text": "Hello",
+
+    "loginText": "Login",
+    "error_login_input_name_and_login": "Please enter your login and password.",
+    "success": "Login successful.",
+    "wrong_password_or_login": "Wrong password or login.",
+    "groups_foundnt": "Groups do not exist",
+    "login2": "Login",
+    "password_input": "Password",
+    "goInAcc": "Log into account",
+
+
+    "turklang": "Turkish Language",
+    "cosmos": "Astronomy",
+    "astronomy": "Astronomy",
+    "physic": "Physics",
+    "kyrglang": "Kyrgyz Language",
+    "ruslang": "Russian Language",
+    "math": "Mathematics",
+    "social": "Social Studies",
+    "history": "History",
+    "chemistry": "Chemistry",
+    "biology": "Biology",
+    "englang": "English",
+    "compscience": "Computer Science",
+    "pi": "Physical Education",
+    "PI": "Physical Education",
+    "doprizvprep": "Military Training",
+    "japanlang": "Japanese Language",
+    "literature": "Russian Literature",
+    "worldliterature": "World Literature",
+    "compprog": "Computer Programming",
+    "socprob": "Социальные проблемы в вычислительной технике",
+    "gamedev": "Видение в разработку игр и в кибербезопасность",
+    "ecologykg": "Экология Кыргызстана",
+    "discmath": "Дискретная математика",
+    "kglanglit": "Кыргызский язык и Литература",
+    "histkg": "История Кыргызстана",
+    "promath": "Профессиональная математика",
+    "basprog": "Базовое программирование",
+    "psych": "Психология",
+    "forlang": "МП иностранного языка",
+    "theorphone": "Теоретическая фонетика",
+    "ageanat": "Возрастная анатомия, физиология и гигиена",
+    "baseng": "Основы английского языка",
+
+    "half-year": "Half year",
+
+    "waswasnt": "Посещаемость",
+
+    "login4": "Login",
+
+    "shortday1": "Mo",
+    "shortday2": "Tu",
+    "shortday3": "We",
+    "shortday4": "Th",
+    "shortday5": "Fr",
+    "shortday6": "Sa",
+    "shortday7": "Su",
+
+    "day1": "Monday",
+    "day2": "Tuesday",
+    "day3": "Wednesday",
+    "day4": "Thursday",
+    "day5": "Friday",
+    "day6": "Saturday",
+    "day7": "Sunday",
+
+    "pcDetected": "U not allow join by pc",
+
+    "bl-24-9": "BL-24-9",
+    "kb-24-9": "KB-24-9",
+    "ai-24-9": "AI-24-9",
+    "ri-24-9": "RI-24-9",
+    "pvks-24-9": "PvKS-24-9",
+    "ia-24-9": "IA-24-9",
+
+    "lessonRul": "Lesson Plan",
+    "homework": "H/W",
+    "no_score": "No Scores",
+
+    "rating": "Rating",
+
+    "you": "You",
+
+    "totalScore": "Scores",
+    "groupRankingTitle": "Groups Rating",
+    
+    "wasnt": "WN",
+    "sicked": "SD",
+    "by-reason": "BR",
+    "clear-score": "Delete"
+}

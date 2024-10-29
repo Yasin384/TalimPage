@@ -1,0 +1,157 @@
+.page-title {
+  margin-bottom: 50px;
+}
+
+.lessonsPage {
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 1000px;
+  margin: 0 auto;
+  margin-top: 5px;
+}
+
+.lesson-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 0.5rem;
+}
+
+.lesson-card5 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: 550px;
+  margin: auto;
+}
+
+.lesson-card5::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 5px;
+  background: linear-gradient(to bottom, #4a90e2, #50e3c2);
+  border-radius: 10px 0 0 10px;
+}
+
+.no_score {
+  font-size: 0.9rem;
+}
+
+.lesson-card5:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.lesson-info {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.lesson-name {
+  font-size: 1.2rem !important;
+  font-weight: bold;
+  color: #004aad !important;
+}
+
+.scores-list {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.score-item-container {
+  display: flex;
+  padding: 0.4rem 0.8rem;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  flex-direction: column;
+  text-align: center;
+}
+
+.score-item {
+  font-weight: bold;
+  font-size: 0.7rem;
+}
+
+.score-item-container.score-low {
+  background-color: #ffcccc;
+  color: #d9534f;
+}
+
+.score-item-container.score-average {
+  background-color: #ffecb3;
+  color: #f0ad4e;
+}
+
+.score-item-container.score-high {
+  background-color: #d4edda;
+  color: #5cb85c;
+}
+
+.score-icon {
+  font-size: 1rem;
+  margin-bottom: 0.2rem;
+}
+
+.score-desc {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.average-score {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+}
+
+.average-badge {
+  padding: 0.4rem 0.8rem;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 8px;
+  font-size: 1.1rem;
+}
+
+.no-scores {
+  font-style: italic;
+  color: #888;
+}
+
+/* Mobile Responsive Design */
+@media (max-width: 768px) {
+  .lessonsPage {
+      padding: 1.5rem;
+  }
+
+  .lesson-card5 {
+      padding: 1rem;
+  }
+
+  .lesson-name {
+      font-size: 5rem;
+  }
+
+  .score-item-container {
+      padding: 0.3rem 0.6rem;
+      font-size: 1rem;
+  }
+
+  .average-badge {
+      font-size: 1rem;
+  }
+
+  .lesson-grid {
+      gap: 0.1rem;
+  }
+}

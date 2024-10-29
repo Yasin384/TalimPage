@@ -1,0 +1,94 @@
+.checkAttendance-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 80px;
+}
+
+/* Button Styling */
+.buttonAttendance {
+    background: #007aff;
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    padding: 14px 28px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 10rem;
+}
+
+.buttonAttendance:hover {
+    background: #005bb5;
+    transform: translateY(-2px);
+}
+
+.buttonAttendance:active {
+    background: #004494;
+}
+
+/* Popup Styling */
+.message-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    animation: fadeIn 0.3s ease forwards;
+}
+
+.popup-content {
+    background: #fff;
+    padding: 50px;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    color: #333;
+    animation: zoomIn 0.4s ease forwards;
+}
+
+.popup-content.success {
+    border-left: 8px solid #007aff;
+}
+
+.popup-content.error {
+    border-left: 8px solid #ff3b30;
+}
+
+.popup-content p {
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+}
+
+.popup-content button {
+    background: #007aff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.popup-content button:hover {
+    background: #005bb5;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0.9); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
