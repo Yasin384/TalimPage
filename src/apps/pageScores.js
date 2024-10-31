@@ -103,22 +103,52 @@ export const PageScores = ({ user }) => {
     }
   };
 
-  const handleBackClick = () => {
-    navigate('/');
+  const handleDownloadAllScoresExcel = async () => {
+    try {
+      const db = getDatabase();
+      const scoresRef = ref(db, `users/groups/${group}`);
+      const snapshot = await get(scoresRef);
+
+      if (!snapshot.exists()) {
+        alert("Нет данных для загрузки.");
+        return;
+      }
+
+      const allScores = snapshot.val();
+      const scoreData = users.map(user => {
+        const userScores = allScores[user.id]?.scores || {};
+        const lessons = Object.keys(userScores);
+        const scoresByLesson = {};
+
+        lessons.forEach(lesson => {
+          if (Array.isArray(userScores[lesson]?.score)) {
+            userScores[lesson].score.forEach(score => {
+              const key = `${lesson}_${score.date}`;
+              scoresByLesson[key] = score.score;
+            });
+          }
+        });
+
+        return {
+          Name: `${user.surname} ${user.name}`,
+          ...scoresByLesson,
+        };
+      });
+
+      const worksheet = utils.json_to_sheet(scoreData);
+      const workbook = utils.book_new();
+      utils.book_append_sheet(workbook, worksheet, 'All Scores');
+
+      writeFile(workbook, 'AllUserScores.xlsx');
+      alert("Excel файл успешно загружен!");
+    } catch (error) {
+      console.error("Ошибка при загрузке всех оценок:", error);
+      alert("Произошла ошибка при загрузке всех оценок.");
+    }
   };
 
-  const handleDownloadExcel = () => {
-    const worksheet = utils.json_to_sheet(
-      users.map(user => ({
-        Name: `${user.surname} ${user.name}`,
-        Score: t(userScores[user.id]) || 'нет оценки',
-      }))
-    );
-
-    const workbook = utils.book_new();
-    utils.book_append_sheet(workbook, worksheet, 'Scores');
-
-    writeFile(workbook, 'UserScores.xlsx');
+  const handleBackClick = () => {
+    navigate('/');
   };
 
   const handleUploadExcel = (event) => {
@@ -159,10 +189,7 @@ export const PageScores = ({ user }) => {
         }
       });
 
-      console.log("Updates from Excel:", updates); // Debugging log
-
       setUserScores(prev => ({ ...prev, ...updates }));
-      console.log("Updated user scores:", userScores); // Debugging log
       alert("Данные из Excel успешно загружены!");
     };
 
@@ -206,8 +233,8 @@ export const PageScores = ({ user }) => {
             <button type='button' id='inter-font' onClick={handleSaveScores}>
               Сохранить
             </button>
-            <button type='button' id='inter-font' onClick={handleDownloadExcel}>
-              Скачать оценки в Excel
+            <button type='button' id='inter-font' onClick={handleDownloadAllScoresExcel}>
+              Скачать все оценки в Excel
             </button>
             <input
               type="file"
@@ -216,7 +243,7 @@ export const PageScores = ({ user }) => {
               style={{ marginTop: '10px' }}
             />
             <button type='button' id='inter-font' onClick={handleSubmitExcel}>
-              Отправить файл в excel
+              Отправить файл в Excel
             </button>
           </>
         ) : (
@@ -230,3 +257,4 @@ export const PageScores = ({ user }) => {
     </div>
   );
 };
+export default PageScores;

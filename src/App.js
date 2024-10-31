@@ -27,6 +27,9 @@ import CheckAttendance from './components/attendanceBtn.js';
 import LoadingPage from './components/loading.js';
 import AichatPage from './aichat/mainpage.js';
 
+import { HomeworkTodoPage } from './ToDoList/homeworkTodo.js';
+import HomeworkListPage from './ToDoList/homeworkList';
+
 function App() {
   const [user, setUser] = useState(null);
   const { t } = useTranslation();
@@ -137,6 +140,10 @@ function Main({ user, setUser }) {
                 <Route path="/scores" element={<PageScores />} />
                 <Route path="/adminpane" element={<AdminPanel />} />
                 <Route path="/leaderBoard" element={<LeaderboardUs user={user} />} />
+
+                <Route path="/homework" element={<HomeworkTodoPage user={user} />} />
+                
+                <Route path="/homeworklist" element={<HomeworkListPage user={user} />} />
 
                 <Route path="/chat" element={<AichatPage user={user} />} />
 

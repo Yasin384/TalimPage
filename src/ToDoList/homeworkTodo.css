@@ -1,0 +1,92 @@
+/* homeworkTodo.css */
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f8ff;
+    color: #333;
+  }
+  
+  .homeworkTodoPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 20px;
+  }
+  
+  .header-info {
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  
+  .header-info h1 {
+    font-size: 28px;
+    color: #1e90ff;
+    margin: 0;
+  }
+  
+  .homework-list-container {
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .homework-block {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .homework-block.completed {
+    background-color: #d1e7ff;
+    text-decoration: line-through;
+  }
+  
+  .homework-block:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  #inter-font {
+    font-size: 18px;
+    margin: 0;
+  }
+  
+  .toggle-icon {
+    font-size: 20px;
+    color: #1e90ff;
+    transition: transform 0.3s;
+  }
+  
+  .homework-block.completed .toggle-icon {
+    transform: rotate(45deg);
+    color: #ff4500;
+  }
+  
+  @media (max-width: 600px) {
+    .homeworkTodoPage {
+      padding: 30px 10px;
+    }
+  
+    .header-info h1 {
+      font-size: 24px;
+    }
+  
+    .homework-list-container {
+      gap: 15px;
+    }
+  
+    #inter-font {
+      font-size: 16px;
+    }
+  }
